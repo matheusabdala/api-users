@@ -5,13 +5,6 @@ const app = express();
 app.use(express.json());
 app.use(userRoutes)
 
-//cria usuario
-app.post('/users', async (req, res) => {})
-app.get('/users', async (req, res) => {})
-app.put('/users/:id', async (req, res) => {})
-app.delete('/users/:id', async (req, res) => {});
-
-
 app.listen(3002, '0.0.0.0', () => {
   console.log('App iniciado na porta 3002');
 });
