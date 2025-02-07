@@ -12,6 +12,6 @@ app.put('/users/:id', async (req, res) => {})
 app.delete('/users/:id', async (req, res) => {});
 
 
-app.listen(3002, () => {
+app.listen(3002, '0.0.0.0', () => {
   console.log('App iniciado na porta 3002');
 });
