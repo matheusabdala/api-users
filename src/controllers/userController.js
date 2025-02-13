@@ -30,6 +30,20 @@ export const getUsers = async (req, res) => {
   }
 };
 
+export const getUser = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const user = await prisma.user.findUnique({
+      where: { id: id },
+    });
+
+    return res.status(200).json(user);
+  } catch (e) {
+    return res.status(400).json({ message: "Error!" });
+  }
+};
+
 export const updateUser = async (req, res) => {
   try {
     await prisma.user.update({
