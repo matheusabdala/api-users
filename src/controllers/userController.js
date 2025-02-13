@@ -9,7 +9,7 @@ export const createUser = async (req, res) => {
       data: {
         email: req.body.email,
         name: req.body.name,
-        age: parseInt(req.body.age),
+        age: req.body.age,
         password: hashedPassword
       }
     });
