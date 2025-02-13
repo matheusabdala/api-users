@@ -13,4 +13,5 @@ model User {
   name     String
   age      Int
   password String
+  profilePicture String?
 }
